@@ -1,17 +1,17 @@
 
-CREAT DATABASE `icloud`
+CREAT DATABASE SkyCloud;
 
-USE `icloud`
+USE SkyCloud;
 
 CREATE TABLE `file` (
   `id` int(10) unsigned NOT NULL auto_increment,
-  `filename` varchar(255) NOT NULL COMMENT 'ÎÄ¼şÃû',
-  `filepath` varchar(600) NOT NULL COMMENT 'ÎÄ¼şÂ·¾¶',
-  `filesize` varchar(255) NOT NULL COMMENT 'ÎÄ¼ş´óĞ¡',
-  `createtime` date default NULL COMMENT '´´½¨ÈÕÆÚ',
-  `canshare` int(2) NOT NULL COMMENT '0±íÊ¾Ë½ÓĞ 1±íÊ¾¹²Ïí',
+  `filename` varchar(255) NOT NULL COMMENT 'æ–‡ä»¶å',
+  `filepath` varchar(600) NOT NULL COMMENT 'æ–‡ä»¶è·¯å¾„',
+  `filesize` varchar(255) NOT NULL COMMENT 'æ–‡ä»¶å¤§å°',
+  `createtime` date default NULL COMMENT 'åˆ›å»ºæ—¥æœŸ',
+  `canshare` int(2) NOT NULL COMMENT '0è¡¨ç¤ºç§æœ‰ 1è¡¨ç¤ºå…±äº«',
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
 
@@ -19,7 +19,7 @@ CREATE TABLE `user` (
   `id` int(11) unsigned NOT NULL auto_increment,
   `username` varchar(255) NOT NULL,
   `password` varchar(16) NOT NULL,
-  `comment` varchar(255) default NULL COMMENT '×¢ÊÍ',
-  `isvip` int(11) NOT NULL COMMENT '1ÊÇvip 0²»ÊÇ',
+  `comment` varchar(255) default NULL COMMENT 'æ³¨é‡Š',
+  `isvip` int(11) NOT NULL COMMENT '1æ˜¯vip 0ä¸æ˜¯',
   PRIMARY KEY  (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
