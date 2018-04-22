@@ -7,8 +7,8 @@
 <title>注册</title>
 </head>
 <body>
-  <div><a href="${pageContext.request.contextPath}/requestin.action" >log in</a>  &nbsp;
-       <a href="${pageContext.request.contextPath}/index.jsp" >首页</a> 
+  <div><a href="${pageContext.request.contextPath}/requestin.action" style="color:#00FFFF; font-weight:bold;">登录</a>  &nbsp;
+       <a href="${pageContext.request.contextPath}/index.jsp" style="color:#00FFFF; font-weight:bold;">首页</a> 
   </div>
    <center>
 	   <form action="${pageContext.request.contextPath}/logup.action" method="post" style="margin: 200px">
