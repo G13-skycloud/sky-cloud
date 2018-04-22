@@ -5,18 +5,18 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>我的iCloud</title>
+<title>我的SkyCloud</title>
 </head>
 <body>
 		
    <div>
-     <a href="${pageContext.request.contextPath}/requestout.action" >log out</a> &nbsp;
+     <a href="${pageContext.request.contextPath}/requestout.action" >注销</a> &nbsp;
      <a href="${pageContext.request.contextPath}/index.jsp" >首页</a> &nbsp;
      <a href="${pageContext.request.contextPath}/help.jsp">帮助</a> &nbsp;
      <a href="${pageContext.request.contextPath}/shutdown.action" >远程关机</a> 
   </div>
   
-  <div style="font-size: 24px ; text-align: center">欢迎你登陆iCloud <div style="font-size: 20px; color: green;font-style: oblique; float:inherit; ">${user_name}</div></div>
+  <div style="font-size: 24px ; text-align: center">欢迎你登陆SkyCloud <div style="font-size: 20px; color: green;font-style: oblique; float:inherit; ">${user_name}</div></div>
   
   <hr color="blue" size="2"/><br/>
   
