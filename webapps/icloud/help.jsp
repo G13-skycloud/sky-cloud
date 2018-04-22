@@ -4,25 +4,22 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>SkyCloud云存储系统－G13</title>
+<title>SkyCloud帮助页</title>
 </head>
 <body>
-  <div>
-<a href="${pageContext.request.contextPath}/requestin.action" style="color:#00FFFF; font-weight:bold; ">登录</a>  &nbsp;
-       <a href="${pageContext.request.contextPath}/requestup.action" style="color:#00FFFF; font-weight:bold; ">用户注册</a>  &nbsp;
-       <a href="${pageContext.request.contextPath}/autologin.action?user_name=${user_name}" style="color:#00FFFF; font-weight:bold; ">我的主页</a>&nbsp;
-       <a href="${pageContext.request.contextPath}/help.jsp" style="color:#00FFFF;font-weight:bold; ">帮助</a>
-  </div>
-
-  <center>
-<%--><img src="sky.jpg" height="50%" width="50%"/><--%>
-<div style="color:#00FFFF;font-size: 40px ; padding-right: 80px ;padding-top: 250px;">欢迎来到SkyCloud云存储系统!</div>
-        <%-->
-	   <form action="${pageContext.request.contextPath}/searchfile.action" method="post"  style="margin: 10px">
-	     <input type="text" name="searchcontent" maxlength="50" size="40" style="font-size: 20px;padding-left:3px; padding-top: 5px; padding-bottom: 3px; text-shadow: blue;" >
-	     <input type="submit" style=" font-size: 24px;cursor: pointer" value="Search">
-        <--%>
-	   </form>
-  </center>
+  <a href="${pageContext.request.contextPath}/index.jsp" style="color:#00FFFF; font-weight:bold;">首页</a> &nbsp; &nbsp;
+  <a href="${pageContext.request.contextPath}/autologin.action?user_name=${user_name}" style="color:#00FFFF; font-weight:bold;">我的主页</a>&nbsp;
+   
+   <br/><br/>
+   
+   <font style="font-size: 30px;color:#00FFFF; font-weight:bold;"> 如何上传或者下载文件？</font><br/>
+   <font style="font-size: 25px;background-color: silver">任何人均可以下载他人共享的文件，如果想上传文件，您必须先注册并登陆</font><br/><br/>
+   <font style="font-size: 30px;color:#00FFFF; font-weight:bold;"> 上传的文件会被别人看到并下载吗？</font><br/>
+   <font style="font-size: 25px; background-color: silver">您上传的文件默认是私有的，上传之后您可以选择共享哪些文件</font><br/><br/>
+   <font style="font-size: 30px;color:#00FFFF; font-weight:bold;"> 忘记密码怎么办？</font><br/>
+   <font style="font-size: 25px; background-color: silver;">您可以发email至740490553@qq.com询问，后续会开通密码找回功能</font><br/><br/>
+   <font style="font-size: 30px;color:#00FFFF; font-weight:bold;"> 上传文件有什么限制吗？</font><br/>
+   <font style="font-size: 25px; background-color: silver;">普通用户单次上传文件不能超过20Mb，VIP用户不能超过50Mb</font><br/>
+   
 </body>
 </html>
