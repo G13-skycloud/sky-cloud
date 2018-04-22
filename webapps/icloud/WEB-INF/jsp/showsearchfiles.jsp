@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>iCloud搜索结果</title>
+<title>SkyCloud搜索结果</title>
 </head>
 <body >
 
@@ -17,7 +17,7 @@
   </style>
   
   <br/>
-  <font size="60px">iCloud搜索结果</font><br/><br/>
+  <font size="60px">SkyCloud搜索结果</font><br/><br/>
     
     <table frame="border" width="100%" align="center">
     	<tr >
