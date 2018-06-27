@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,700,700italic,600'>
+    <link rel='stylesheet prefetch' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+
+    <style type="text/css">
+
+        html, body {width:100%;height:100%;} /*非常重要的样式让背景图片100%适应整个屏幕*/
+        .bg {display: table;width: 100%;height: 100%;padding: 100px 0;text-align: center;color: #fff;background: url(E:\bootstrap\wallhaven-646447.png) no-repeat bottom center;background-color: #000;background-size: cover;}
+        .my-navbar {padding:20px 0;transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;}
+        .my-navbar a{background:transparent !important;color:#fff !important}
+        .my-navbar a:hover {color:#45bcf9 !important;background:transparent;outline:0}
+        .my-navbar a {transition: color 0.5s ease-in-out;}/*-webkit-transition ;-moz-transition*/
+        .top-nav {padding:0;background:#000;}
+        button.navbar-toggle {background-color:#fbfbfb;}/*整个背景都是transparent透明的，会看不到，所以再次覆盖一下*/
+        button.navbar-toggle > span.icon-bar {background-color:#dedede}
+        html,body{
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .bg-div{
+            background: url('https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-646447.png') center;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
+        .signin{
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        .user-avater{
+            border-radius: 50%;
+            border: 4px solid #fff;
+        }
+        .box {
+            width: 400px;
+            color: #666;
+            text-align: center;
+            margin-top: 30px;
+            margin-bottom: 100px;
+            border-radius: 4px;
+            border: 2px solid rgba(255,255,255, 0.2);
+            border-top: 0;
+            position: relative;
+        }
+        .box::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 40px;
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            margin-left: -21px;
+            border-top-left-radius: 4px;
+            border-left: 2px solid rgba(255,255,255, 0.3);
+            border-top: 2px solid rgba(255,255,255, 0.3);
+            transform: rotate(45deg);
+            box-shadow: inset 1px 0 0 rgba(255,255,255,0.2), inset 0 1px 0 rgba(255,255,255,0.2);
+        }
+        .box::before {
+            content: '';
+            display: block;
+            width: 400px;
+            height: 2px;
+            position: absolute;
+            /* margin: -199px 199px; */
+            border-top-left-radius: 4px;
+            /* transform: rotate(90deg); */
+            box-shadow: inset 171px 0 0 0 rgba(255,255,255, 0.2), inset -171px 0 0 0 rgba(255,255,255, 0.2);
+        }
+        .signin-form{
+            height: calc(100% - 40px);
+            padding: 20px;
+        }
+        .btn{
+            color: #fff;
+            display: inline-block;
+            margin-bottom: 0;
+            font-weight: normal;
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+            background-image: none;
+            border: 1px solid transparent;
+            white-space: nowrap;
+            padding: 6px 12px;
+            font-size: 13px;
+            line-height: 1.42857143;
+            border-radius: 0px;
+            -webkit-user-select: none;
+        }
+        .btn-submit{
+            width: 360px;
+            height: 40px;
+            background-color: #3B89F5;
+            border-color: #3B89F5;
+            margin-top: 20px;
+        }
+        .btn-submit:hover{
+            color: #fff;
+            background-color: #0C6CED;
+            border-color: #0C6CED;
+            text-decoration: none;
+        }
+        input::-webkit-input-placeholder {
+            color: #242424;
+        }
+        .form-control {
+            display: block;
+            width: 100%;
+            height: 40px;
+            padding: 6px 12px;
+            font-size: 15px;
+            line-height: 1.42857143;
+            color: #fff;
+            box-sizing: border-box;
+        }
+        .form-control:focus {
+            border-color: rgba(59,137,245, 0.5);
+            outline: 0;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(59,137,245, 0.6);
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(59,137,245, 0.6);
+        }
+        .form-input{
+            background-color: black;
+            border: 2px solid rgba(255,255,255,0.3);
+            box-shadow: inset 0 0 4px rgba(255,255,255,0.2),0 0 4px rgba(255,255,255,0.2);
+        }
+        .save-div{
+            color: #fff;
+            font-weight: bold;
+            float:right;
+        }
+
+
+
+
+        .signup{
+            font-weight: 400;
+            font-size: 13px;
+            color: #fff;
+            margin-top: 8px;
+            display: block;
+        }
+        .signup-a{
+            color: #468BEA;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-fixed-top my-navbar" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">skycloud</a>
+        </div>
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">搜索</a></li>
+
+
+                <li>
+
+                    <a href="#">帮助</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="bg">
+    <div class="bg-div"></div>
+
+    <div class="signin">
+        <img class="user-avater" src="https://raw.githubusercontent.com/MrQingchun/lpy-nodejs/master/public/img/user-4.png"/>
+
+        <div class="box">
+            <form class="signin-form" method="post">
+                <div >
+                    <input class="form-control form-input" placeholder="用户名" type="text" name="name"/>
+                </div>
+                <div class="" style="margin: 20px 0;">
+                    <input class="form-control form-input" placeholder="密   码" type="password" name="password"/>
+                </div>
+                <div class="save-div">
+                    <input type="checkbox" class="save-checkbox"  onchange="checkSave()" checked/>
+                    <span class="save-pass">记住密码</span>
+
+                </div>
+                <input type="submit" class="btn btn-primary btn-submit" value="登&nbsp;&nbsp;录">
+                <span class="signup">还没有账户，立即<a class="signup-a" href="#">注册</a></span>
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+        </div>
+    </div>
+
+    <script>
+
+    $(window).scroll(function () {
+        if ($(".navbar").offset().top > 50) {$(".navbar-fixed-top").addClass("top-nav");
+        }else {$(".navbar-fixed-top").removeClass("top-nav");}
+    })</script>
+<script src="http://www.w2bc.com/scripts/2bc/_gg_980_90.js" type="text/javascript"></script>
+</body></html>

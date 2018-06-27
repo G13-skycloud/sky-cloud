@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <meta charset="utf-8" />
+    <link href="styles1.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=PT+Sans:400,700'>
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js"></script>
+
+
+
+
+    <script language="javascript" type="text/javascript" src="jquery.js"></script>
+    <script language="javascript" type="text/javascript" src="jquery.bstablecrosshair.js"></script>
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style type="text/css">
+        html, body {width:100%;height:100%;} /*非常重要的样式让背景图片100%适应整个屏幕*/
+        .bg {display: table;width: 100%;height: 100%;padding: 100px 0;text-align: center;color: #fff;background: url(https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-646447.png) no-repeat bottom center;background-color: #000;background-size: cover;}
+        .my-navbar {padding:20px 0;transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;}
+        .my-navbar a{background:transparent !important;color:#fff !important}
+        .my-navbar a:hover {color:#45bcf9 !important;background:transparent;outline:0}
+        .my-navbar a {transition: color 0.5s ease-in-out;}/*-webkit-transition ;-moz-transition*/
+        .top-nav {padding:0;background:#000;}
+        button.navbar-toggle {background-color:#fbfbfb;}/*整个背景都是transparent透明的，会看不到，所以再次覆盖一下*/
+        button.navbar-toggle > span.icon-bar {background-color:#dedede}
+        .form-horizontal{
+            background: #fff;
+            padding-bottom: 40px;
+            border-radius: 15px;
+            text-align: center;
+        }
+        .form-horizontal .heading{
+            display: block;
+            font-size: 35px;
+            font-weight: 700;
+            padding: 35px 0;
+            border-bottom: 1px solid #f0f0f0;
+            margin-bottom: 30px;
+        }
+        .form-horizontal .form-group{
+            padding: 0 40px;
+            margin: 0 0 25px 0;
+            position: relative;
+        }
+        .form-horizontal .form-control{
+            background: #f0f0f0;
+            border: none;
+            border-radius: 20px;
+            box-shadow: none;
+            padding: 0 20px 0 45px;
+            height: 40px;
+            transition: all 0.3s ease 0s;
+        }
+        .form-horizontal .form-control:focus{
+            background: #e0e0e0;
+            box-shadow: none;
+            outline: 0 none;
+        }
+        .form-horizontal .form-group i{
+            position: absolute;
+            top: 12px;
+            left: 60px;
+            font-size: 17px;
+            color: #c8c8c8;
+            transition : all 0.5s ease 0s;
+        }
+        .form-horizontal .form-control:focus + i{
+            color: #00b4ef;
+        }
+        .form-horizontal .fa-question-circle{
+            display: inline-block;
+            position: absolute;
+            top: 12px;
+            right: 60px;
+            font-size: 20px;
+            color: #808080;
+            transition: all 0.5s ease 0s;
+        }
+        .form-horizontal .fa-question-circle:hover{
+            color: #000;
+        }
+        .form-horizontal .main-checkbox{
+            float: left;
+            width: 20px;
+            height: 20px;
+            background: #11a3fc;
+            border-radius: 50%;
+            position: relative;
+            margin: 5px 0 0 5px;
+            border: 1px solid #11a3fc;
+        }
+        .form-horizontal .main-checkbox label{
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+        }
+        .form-horizontal .main-checkbox label:after{
+            content: "";
+            width: 10px;
+            height: 5px;
+            position: absolute;
+            top: 5px;
+            left: 4px;
+            border: 3px solid #fff;
+            border-top: none;
+            border-right: none;
+            background: transparent;
+            opacity: 0;
+            -webkit-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+        }
+        .form-horizontal .main-checkbox input[type=checkbox]{
+            visibility: hidden;
+        }
+        .form-horizontal .main-checkbox input[type=checkbox]:checked + label:after{
+            opacity: 1;
+        }
+        .form-horizontal .text{
+            float: left;
+            margin-left: 7px;
+            line-height: 20px;
+            padding-top: 5px;
+            text-transform: capitalize;
+        }
+        .form-horizontal .btn{
+            float: right;
+            font-size: 14px;
+            color: #fff;
+            background: #00b4ef;
+            border-radius: 30px;
+            padding: 10px 25px;
+            border: none;
+            text-transform: capitalize;
+            transition: all 0.5s ease 0s;
+        }
+        @media only screen and (max-width: 479px){
+            .form-horizontal .form-group{
+                padding: 0 25px;
+            }
+            .form-horizontal .form-group i{
+                left: 45px;
+            }
+            .form-horizontal {
+                padding: 10px 20px;
+            }
+        }
+        .search{
+
+            padding-left: 50px;
+            margin-left: -10px;
+
+        }
+        .submit{
+            margin-top: 40px;
+            position: fixed;
+            margin-left: 500px;
+
+        }
+        .sum{
+            margin-left: 350px;
+            margin-top: 40px;
+        }
+        .file{
+            margin-left: 500px;
+            margin-right: 100px;
+        }
+        .title {
+            padding-left: 50px;
+        }
+        body {
+
+            color: #4f6b72;
+            background: #E6EAE9;
+        }
+
+        a {
+            color: #c75f3e;
+        }
+
+        #mytable {
+            width: 700px;
+            padding: 0;
+            margin: 0 auto;
+            background: #fff;
+        }
+
+
+
+        td {
+            border-right: 1px solid #C1DAD7;
+            border-bottom: 1px solid #C1DAD7;
+            padding: 6px 6px 6px 12px;
+            color: #4f6b72;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-fixed-top my-navbar" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">skycloud</a>
+        </div>
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">注销</a></li>
+                <li><a href="#"></a></li>
+                <li>
+                    <a href="#">首页</a>
+                </li>
+                <li><a href="#"></a></li>
+                <li>
+                    <a href="#">帮助</a>
+                </li>
+                <li><a href="#"></a></li>
+                <li>
+                    <a href="#">我的群组</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="bg">
+
+    <h1>你加入的小组</h1>
+    <h1>用户名</h1>
+
+
+
+
+    <hr>
+
+    <div class="container">
+
+
+        <table class="table table-bordered">
+            <thead>
+            <tr>
+                <th style="padding-left: 75px">群组名</th>
+                <th style="padding-left: 75px">创建人</th>
+                <th style="padding-left: 75px">创建时间</th>
+                <th style="padding-left: 75px">已有成员</th>
+                <th style="padding-left: 75px">成员上限</th>
+                <th style="padding-left: 75px">进入小组空间</th>
+
+
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <nav aria-label="Page navigation">
+        <ul class="pagination">
+            <li>
+                <a href="#" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li>
+                <a href="#" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<script>
+    $(window).scroll(function () {
+        if ($(".navbar").offset().top > 50) {$(".navbar-fixed-top").addClass("top-nav");
+        }else {$(".navbar-fixed-top").removeClass("top-nav");}
+    })</script>
+
+<script src="assets/js/jquery-1.8.2.min.js"></script>
+<script src="assets/js/supersized.3.2.7.min.js"></script>
+<script src="assets/js/supersized-init.js"></script>
+<script src="assets/js/scripts.js"></script>
+
+</body></html>

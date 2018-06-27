@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/demo.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <style type="text/css">
+        html, body {width:100%;height:100%;} /*非常重要的样式让背景图片100%适应整个屏幕*/
+        .bg {display: table;width: 100%;height: 100%;padding: 100px 0;text-align: center;color: #fff;background: url(https://wallpapers.wallhaven.cc/wallpapers/full/wallhaven-646447.png) no-repeat bottom center;background-color: #000;background-size: cover;}
+        .my-navbar {padding:20px 0;transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;}
+        .my-navbar a{background:transparent !important;color:#fff !important}
+        .my-navbar a:hover {color:#45bcf9 !important;background:transparent;outline:0}
+        .my-navbar a {transition: color 0.5s ease-in-out;}/*-webkit-transition ;-moz-transition*/
+        .top-nav {padding:0;background:#000;}
+        button.navbar-toggle {background-color:#fbfbfb;}/*整个背景都是transparent透明的，会看不到，所以再次覆盖一下*/
+        button.navbar-toggle > span.icon-bar {background-color:#dedede}
+
+
+        * {box-sizing: border-box;}
+        body{margin: 0;}
+        div.search {padding: 30px 0}
+        form {
+            position: relative;
+            width: 300px;
+            margin: 0 auto;
+        }
+        .d1 {background: #A3D0C3;}
+        .d1 input {
+            width: 100%;
+            height: 42px;
+            padding-left: 10px;
+            border: 2px solid #7BA7AB;
+            border-radius: 5px;
+            outline: none;
+            background: #F9F0DA;
+            color: #9E9C9C;
+        }
+        .d1 button {
+            position: absolute;
+            top: 0;
+            right: 0px;
+            width: 42px;
+            height: 42px;
+            border: none;
+            background: #7BA7AB;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+        .d1 button:before {
+            content: "\f002";
+            font-family: FontAwesome;
+            font-size: 16px;
+            color: #F9F0DA;
+        }
+        .d2 {background: #DABB52;}
+        .d2 input, .d2 button {
+            border: none;
+            outline: none;
+            border-radius: 3px;
+        }
+        .d2 input {
+            width: 100%;
+            height: 42px;
+            background: #F9F0DA;
+            padding-left: 15px;
+        }
+        .d2 button {
+            height: 26px;
+            width: 26px;
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            background: #F15B42;
+            cursor: pointer;
+        }
+        .d2 button:before {
+            content: "\f105";
+            font-family: FontAwesome;
+            color: #F9F0DA;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .d3 {background: #F9F0DA;}
+        .d3 form {
+            background: #A3D0C3;
+        }
+        .d3 input, .d3 button {
+            border: none;
+            outline: none;
+            background: transparent;
+        }
+        .d3 input {
+            width: 100%;
+            height: 42px;
+            padding-left: 15px;
+        }
+        .d3 button {
+            height: 42px;
+            width: 42px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+        }
+        .d3 button:before {
+            content: "\f002";
+            font-family: FontAwesome;
+            font-size: 16px;
+            color: #F9F0DA;
+        }
+        .d4 {background: #F15B42;}
+        .d4 form {
+            background: #F9F0DA;
+            border-bottom: 4px solid #be290e;
+        }
+        .d4 input, .d4 button {
+            border: none;
+            outline: none;
+            background: transparent;
+        }
+        .d4 input {
+            width: 100%;
+            height: 42px;
+            padding-left: 15px;
+        }
+        .d4 button {
+            height: 42px;
+            width: 42px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+        }
+        .d4 button:before {
+            content: "\f178";
+            font-family: FontAwesome;
+            font-size: 20px;
+            color: #be290e;
+        }
+        .d5 {background: #683B4D;}
+        .d5 input, .d5 button {
+            outline: none;
+            background: transparent;
+        }
+        .d5 input {
+            width: 100%;
+            height: 42px;
+            padding-left: 15px;
+            border: 3px solid #F9F0DA;
+        }
+        .d5 button {
+            border: none;
+            height: 42px;
+            width: 42px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+        }
+        .d5 button:before {
+            content: "\f002";
+            font-family: FontAwesome;
+            font-size: 16px;
+            color: #F9F0DA;
+        }
+        .d5 input:focus {
+            border-color: #311c24
+        }
+        .d6 {background: #B46381;}
+        .d6 form {
+            height: 42px;
+        }
+        .d6 input {
+            height: 100%;
+            width: 0;
+            padding: 0 42px 0 15px;
+            border: none;
+            border-bottom: 2px solid transparent;
+            outline: none;
+            background: transparent;
+            transition: .4s cubic-bezier(0, 0.8, 0, 1);
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 2;
+        }
+        .d6 input:focus {
+            width: 300px;
+            z-index: 1;
+            border-bottom: 2px solid #F9F0DA;
+        }
+        .d6 button {
+            background: #683B4D;
+            border: none;
+            height: 42px;
+            width: 42px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+        }
+        .d6 button:before {
+            content: "\f002";
+            font-family: FontAwesome;
+            font-size: 16px;
+            color: #F9F0DA;
+        }
+        .d7 {background: #7BA7AB;}
+        .d7:after {content:""; clear:both; display:table}
+        .d7 form {
+            width: auto;
+            float: right;
+            margin-right: 30px;
+        }
+        .d7 input {
+            width: 250px;
+            height: 42px;
+            padding-left: 15px;
+            border-radius: 42px;
+            border: 2px solid #324b4e;
+            background: #F9F0DA;
+            outline: none;
+            position: relative;
+            transition: .3s linear;
+        }
+        .d7 input:focus {
+            width: 300px;
+        }
+        .d7 button {
+            width: 42px;
+            height: 42px;
+            background: none;
+            border: none;
+            position: absolute;
+            top: -2px;
+            right: 0;
+        }
+        .d7 button:before{
+            content: "\f002";
+            font-family: FontAwesome;
+            color: #324b4e;
+        }
+        #signup {
+            width: 550px;
+            height: 330px;
+            margin: 100px auto 50px auto;
+            padding: 20px;
+            position: relative;
+            background: #fff url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAAECAMAAAB883U1AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAAlQTFRF7+/v7u7u////REBVnAAAAAN0Uk5T//8A18oNQQAAABZJREFUeNpiYGJiYmBiYgRiBhAGCDAAALsAFJhiJ+UAAAAASUVORK5CYII=);
+            border: 1px solid #ccc;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+        }
+
+        #signup::before,
+        #signup::after {
+            content: "";
+            position: absolute;
+            bottom: -3px;
+            left: 2px;
+            right: 2px;
+            top: 0;
+            z-index: -1;
+            background: #000;
+            border: 1px solid #ccc;
+        }
+
+        #signup::after {
+            left: 4px;
+            right: 4px;
+            bottom: -5px;
+            z-index: -2;
+            -moz-box-shadow: 0 8px 8px -5px rgba(0,0,0,.3);
+            -webkit-box-shadow: 0 8px 8px -5px rgba(0,0,0,.3);
+            box-shadow: 0 8px 8px -5px rgba(0,0,0,.3);
+        }
+
+        /*------------------------------*/
+
+        #signup h1 {
+            position: relative;
+            font: italic 1em/3.5em 'trebuchet MS',Arial, Helvetica;
+            color: #999;
+            text-align: center;
+            margin: 0 0 20px;
+        }
+
+        #signup h1::before,
+        #signup h1::after{
+            content:'';
+            position: absolute;
+            border: 1px solid rgba(0,0,0,.15);
+            top: 10px;
+            bottom: 10px;
+            left: 0;
+            right: 0;
+        }
+
+        #signup h1::after{
+            top: 0;
+            bottom: 0;
+            left: 10px;
+            right: 10px;
+        }
+
+        /*------------------------------*/
+
+        ::-webkit-input-placeholder {
+            color: #bbb;
+        }
+
+        :-moz-placeholder {
+            color: #000;
+        }
+
+        .placeholder{
+            color: #fff; /* polyfill */
+        }
+
+        #signup input{
+            margin: 5px 0;
+            padding: 15px;
+            width: 100%;
+            *width: 518px;
+            color: black;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+        }
+
+        #signup input:focus{
+            outline: 0;
+            border-color: #000;
+            -moz-box-shadow: 0 2px 1px rgba(0, 0, 0, .3) inset;
+            -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, .3) inset;
+            box-shadow: 0 2px 1px rgba(0, 0, 0, .3) inset;
+        }
+
+        #signup button{
+            margin: 20px 0 0 0;
+            padding: 15px 8px;
+            width: 100%;
+            cursor: pointer;
+            border: 1px solid #2493FF;
+            overflow: visible;
+            display: inline-block;
+            color: #fff;
+            font: bold 1.4em arial, helvetica;
+            text-shadow: 0 -1px 0 rgba(0,0,0,.4);
+            background-color: #2493ff;
+            background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,.5)), to(rgba(255,255,255,0)));
+            background-image: -webkit-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+            background-image: -moz-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+            background-image: -ms-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+            background-image: -o-linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+            background-image: linear-gradient(top, rgba(255,255,255,.5), rgba(255,255,255,0));
+            -webkit-transition: background-color .2s ease-out;
+            -moz-transition: background-color .2s ease-out;
+            -ms-transition: background-color .2s ease-out;
+            -o-transition: background-color .2s ease-out;
+            transition: background-color .2s ease-out;
+            -moz-border-radius: 3px;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            -moz-box-shadow:  0 2px 1px rgba(0, 0, 0, .3),
+            0 1px 0 rgba(255, 255, 255, .5) inset;
+            -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, .3),
+            0 1px 0 rgba(255, 255, 255, .5) inset;
+            box-shadow: 0 2px 1px rgba(0, 0, 0, .3),
+            0 1px 0 rgba(255, 255, 255, .5) inset;
+        }
+
+        #signup button:hover{
+            background-color: #7cbfff;
+            border-color: #7cbfff;
+        }
+
+        #signup button:active{
+            position: relative;
+            top: 3px;
+            text-shadow: none;
+            -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, .3) inset;
+            -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, .3) inset;
+            box-shadow: 0 1px 0 rgba(255, 255, 255, .3) inset;
+        }
+
+        /* ------------------------------------------------- */
+
+        #about{
+            color: #999;
+            text-align: center;
+            font: 0.9em Arial, Helvetica;
+        }
+
+        #about a{
+            color: #777;
+        }
+
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-fixed-top my-navbar" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse"
+                    data-target="#example-navbar-collapse">
+                <span class="sr-only">切换导航</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">skycloud</a>
+        </div>
+        <div class="collapse navbar-collapse" id="example-navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#">注册</a></li>
+
+                <li>
+                    <a href="#">登陆</a>
+                </li>
+                <li><a href="#">我的主页</a> </li>
+                <li><a href="#">帮助</a> </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="bg">
+
+    <form id="signup">
+        <h1>创建你的群组</h1>
+        <input type="text" placeholder="请输入群组名" required="">
+        <input type="password" placeholder="请输入群暗号" required="">
+
+        <button type="submit">创建</button>
+    </form>
+
+
+</div>
+
+<script src="js/jquery.min.js"></script>
+<script src="jiaoben5291/js/ios-parallax.js"></script>
+<script>
+
+    $(window).scroll(function () {
+        if ($(".navbar").offset().top > 50) {$(".navbar-fixed-top").addClass("top-nav");
+        }else {$(".navbar-fixed-top").removeClass("top-nav");}
+    })</script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        $('#top-image').iosParallax({
+            movementFactor: 50
+        });
+    });
+    <script>
+    var a=document.getElementsByTagName('input');
+    for(var i=0;i<a.length;i++)a[i].onkeydown=a[i].onchange=function(){this.style.color='#00f'}
+</script>
+
+</script>
+
+
+</body></html>
